@@ -1,26 +1,28 @@
 # iTerm2 Settings
 
-Custom settings for iTerm2.
+Custom settings for iTerm2 (`com.googlecode.iterm2.plist` file).
 
 ## Import
 
-1. Go to _iTerm2 > Preferences...> General > Preferences_
-1. Make sure that _Load preferences from a custom folder or URL_ is checked
-1. Enter the following URL into the text box:
-   ```
-   https://raw.githubusercontent.com/weibeld/iterm2-settings/main/com.googlecode.iterm2.plist
-   ```
-1. Restart iTerm2
+To restore these settings on a new machine:
+
+1. Clone this repository to `~/settings-iterm2`.
+2. Open iTerm2 and go to **Settings > General > Settings**
+3. Under **External settings**, check **Load preferences from a custom folder or URL**
+4. Click **Browse** and select the folder with the cloned repository
+5. Set **Save changes** to **Automatically**
+5. Restart iTerm2
 
 ## Export
 
-1. Go to _iTerm2 > Preferences...> General > Preferences_
-1. Make sure that _Load preferences from a custom folder or URL_ is checked
-1. Click _Browse_ and select this folder
-1. Click _Save Now_
-1. Restore the following URL in the text box:
-   ```
-   https://raw.githubusercontent.com/weibeld/iterm2-settings/main/com.googlecode.iterm2.plist
-   ```
+All changes to the settings are automatically saved to the local copy of the `com.googlecode.iterm2.plist` file since **Save changes** is set to **Automatically** in **External settings**.
 
-The above overwrites the `com.googlecode.iterm2.plist` file in this repository.
+## Backup
+
+To back up the current version of the local `com.googlecode.iterm2.plist` file, commit and push to GitHub:
+
+```bash
+cd ~/settings-iterm2
+git add com.googlecode.iterm2.plist
+git commit && git push
+```
